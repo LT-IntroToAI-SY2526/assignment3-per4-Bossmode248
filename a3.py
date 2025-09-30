@@ -135,9 +135,12 @@ def director_by_title(matches: List[str]) -> List[str]:
     """
     result = []
     Title = matches[0]
-    for movies in movie_db:
-        title = get_title
-    pass
+    for movie in movie_db:
+        title = get_title(movie)
+        if Title == title:
+            result.append(get_director(movie))
+    return result
+
 
 
 
@@ -150,7 +153,13 @@ def title_by_director(matches: List[str]) -> List[str]:
     Returns:
         a list of movies titles directed by the passed in director
     """
-    pass
+    result = []
+    director = matches[0]
+    for movie in movie_db:
+        Director = get_director(movie)
+        if director == Director:
+            result.append(get_title(movie))
+    return result
 
 
 def actors_by_title(matches: List[str]) -> List[str]:
@@ -162,8 +171,13 @@ def actors_by_title(matches: List[str]) -> List[str]:
     Returns:
         a list of actors who acted in the passed in title
     """
-    pass
-
+    result = []
+    title = matches[0]
+    for movie in movie_db:
+        Title = get_title(movie)
+        if title == Title:
+            result = get_actors(movie)
+    return result
 
 def year_by_title(matches: List[str]) -> List[int]:
     """Finds year of passed in movie title
@@ -174,7 +188,13 @@ def year_by_title(matches: List[str]) -> List[int]:
     Returns:
         a list of one item (an int), the year that the movie was made
     """
-    pass
+    result = []
+    title = matches[0]
+    for movie in movie_db:
+        Title = get_title(movie)
+        if title == Title:
+            result.append(get_year(movie))
+    return result 
 
 
 def title_by_actor(matches: List[str]) -> List[str]:
@@ -186,7 +206,39 @@ def title_by_actor(matches: List[str]) -> List[str]:
     Returns:
         a list of movie titles that the actor acted in
     """
-    pass
+    result = []
+    actor_name = matches[0]
+    for movie in movie_db:
+        Actors = get_actors(movie)
+        for actor in Actors:
+            if actor_name in Actors:
+                
+                result.append(get_title(movie))
+                break
+    return result 
+
+
+def yearsActive_by_actor(matches: List[str]) -> List[int]:
+    """
+    Finds the years an actor has been active in a movie
+
+    args:
+    matches - an actor
+
+
+    Returns:
+    the years they have been active
+    """
+    result = []
+    actor_name = matches [0]
+    for movie in movie_db:
+        Actors = get_actors(movie)
+        for actor in Actors:
+            if actor_name in Actors:
+                result.append(get_year(movie))
+                break
+    return result 
+
 
 
 # dummy argument is ignored and doesn't matter
@@ -296,7 +348,8 @@ if __name__ == "__main__":
     assert sorted(title_by_actor(["orson welles"])) == sorted(
         ["citizen kane", "othello"]
     ), "failed title_by_actor test"
-    
+    assert isinstance(yearsActive_by_actor(["bruno zanin"]), list), "failed yearsActive_by_actor not in database"
+    assert sorted(yearsActive_by_actor(["bruno zanin"])) == sorted([1974]), "Failed yearsActive_by_actor test"
     
     assert sorted(search_pa_list(["hi", "there"])) == sorted(
         ["I don't understand"]
