@@ -15,11 +15,12 @@ This assignment completes our movie chatbot system by implementing action functi
 ## Reflection Questions
 
 1. What are some key programming concepts or techniques that you learned while completing this assignment?
-
+Through this assignment, I have learned how to effectively swift through data bases to find specific things using certain variables like time and actors. I've also learned to use code I myself am just experiencing, and how to make my own functions and asserts better. 
 
 
 2. How does the overall movie chatbot system work? Explain the flow from when a user types a query to when they receive an answer.
+When the user types in a query, the  system firsts searches to see if what the user gave is in the data base. If its not found, nothing is done. Once its found, it searches with in the relalted movies to find the information the user wanted out of their query, then returns it in its own list. 
 
 
-
-3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use?
+3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use? 
+This could be used any where, as Data bases are a commonly used thing to store lots of data for a specific thing. When you have so much data, you need an effective way to be able to search through all the data. To improve this system, I would make it so we could find things not just by using other factors, but by putting in a search feature to just find what you want immediately. Especially if the user is just looking for one thing. 
