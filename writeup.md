@@ -23,4 +23,4 @@ When the user types in a query, the  system firsts searches to see if what the u
 
 
 3. What are some real-world applications where this type of pattern-matching chatbot system could be useful? How might you extend or improve this system for practical use? 
-This could be used any where, as Data bases are a commonly used thing to store lots of data for a specific thing. When you have so much data, you need an effective way to be able to search through all the data. To improve this system, I would make it so we could find things not just by using other factors, but by putting in a search feature to just find what you want immediately. Especially if the user is just looking for one thing. 
+This could be used any where, as Data bases are a commonly used thing to store lots of data for a specific thing. When you have so much data, you need an effective way to be able to search through all the data. To improve this system, I would make it so we have a better search funtion. its too specific, so we need a search funtion that can search through the data base only using things like keywords like "in (year)" or "from (year)" and more. 

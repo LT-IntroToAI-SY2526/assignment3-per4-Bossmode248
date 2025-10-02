@@ -435,4 +435,24 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "spike lee",
         ],
     ),
+    (
+        "the substitute",
+        "robert mandel",
+        1996,
+        [
+            	
+            "tom berenger",
+            "rnie hudson",
+            "Diane Venora",
+            "Glenn Plummer",
+            "Marc Anthony",
+            "luis guzmán",
+            "william Forsythe",
+            "angela basset",
+            "albert hall",
+            "al freeman jr",
+            "delroy lindo",
+            "spike lee",
+        ],
+    )
 ]
