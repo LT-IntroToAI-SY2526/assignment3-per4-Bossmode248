@@ -237,7 +237,7 @@ def yearsActive_by_actor(matches: List[str]) -> List[int]:
             if actor_name in Actors:
                 result.append(get_year(movie))
                 break
-    return result 
+    return result
 
 
 
@@ -255,7 +255,7 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("what movies were made after _"), title_after_year),
     # note there are two valid patterns here two different ways to ask for the director
     # of a movie
-    (str.split("what years were % active in."), yearsActive_by_actor),
+    (str.split("what years were % active in"), yearsActive_by_actor),
     (str.split("who directed %"), director_by_title),
     (str.split("who was the director of %"), director_by_title),
     (str.split("what movies were directed by %"), title_by_director),
@@ -325,7 +325,7 @@ if __name__ == "__main__":
     ), "failed title_before_year test"
     assert isinstance(title_after_year(["1990"]), list), "title_after_year not returning a list"
     assert sorted(title_after_year(["1990"])) == sorted(
-        ["boyz n the hood", "dead again", "the crying game", "flirting", "malcolm x"]
+        ["boyz n the hood", "dead again", "the crying game", "flirting", "malcolm x", "the substitute"]
     ), "failed title_after_year test"
     assert isinstance(director_by_title(["jaws"]), list), "director_by_title not returning a list"
     assert sorted(director_by_title(["jaws"])) == sorted(
@@ -366,7 +366,7 @@ if __name__ == "__main__":
     assert sorted(
         search_pa_list(["what", "movies", "were", "made", "in", "2020"])
     ) == sorted(["No answers"]), "failed search_pa_list test 3"
-    search_pa_list(["what", "years", "were", "made", "in", "2020"])
-    ) == sorted(["No answers"]), "failed search_pa_list test 3"
-d
+    assert sorted(search_pa_list(["what", "years", "were", "tom berenger", "active", "in"])
+    ) == sorted([1996]), "failed search_pa_list test 4"
+
     print("All tests passed!")

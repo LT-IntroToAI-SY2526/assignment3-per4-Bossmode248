@@ -439,15 +439,14 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
         "the substitute",
         "robert mandel",
         1996,
-        [
-            	
+        [	
             "tom berenger",
             "rnie hudson",
-            "Diane Venora",
-            "Glenn Plummer",
-            "Marc Anthony",
+            "diane Venora",
+            "plenn plummer",
+            "marc anthony",
             "luis guzmán",
-            "william Forsythe",
+            "william forsythe",
             "angela basset",
             "albert hall",
             "al freeman jr",
